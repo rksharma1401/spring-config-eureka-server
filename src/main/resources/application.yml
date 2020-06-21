@@ -1,3 +1,13 @@
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/
+
+
 ---
 spring:
   cloud:
@@ -9,11 +19,3 @@ spring:
             - 'userApp*'
   
 
-eureka:
-  instance:
-    hostname: localhost
-  client:
-    registerWithEureka: false
-    fetchRegistry: false
-    serviceUrl:
-      defaultZone: https://spring-conf-server.herokuapp.com/eureka/ 
