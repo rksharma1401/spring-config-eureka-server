@@ -1,18 +1,18 @@
-eureka:
+eureka: 
+  dashboard:
+    path: /eurekaui
   instance:
     hostname: localhost
   client:
     registerWithEureka: false
-    fetchRegistry: false
-    serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/
+    fetchRegistry: false 
 
 
 ---
-spring:
-  cloud:
+spring: 
+  cloud: 
     config:
-      server: 
+      server:  
         git:
           uri: https://github.com/rksharma1401/spring-config # default 
           search-paths:
