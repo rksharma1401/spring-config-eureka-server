@@ -7,10 +7,13 @@ spring:
           uri: https://github.com/rksharma1401/spring-config # default 
           search-paths:
             - 'userApp*'
-            
-eureka:
-  client:
-    fetch-registry: false
-    register-with-eureka: false
+  
 
-    
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: https://spring-conf-server.herokuapp.com/eureka/ 
