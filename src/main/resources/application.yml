@@ -15,7 +15,6 @@ spring:
       server:  
         git:
           uri: https://github.com/rksharma1401/spring-config # default 
-          search-paths:
-            - userApp,springcloudconfigclient
+          searchPaths: "{application}"
   
 
